@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .form-holder {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .title-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.25rem;
+            margin-bottom: 3.25rem;
+        }
+
+        button {
+            max-width: 4rem;
+        }
+
+        .indent {
+            margin-left: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 1.25rem !important;
+        }
+
+        .mt-5 {
+            margin-top: 0.5rem !important;
+        }
+
+        .mb-5 {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .skill-level-holder {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: baseline;
+        }
+
+        .checkbox-holder {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: baseline;
+            align-items: center;
+        }
+
+        .checkbox-holder input {
+            margin-right: 0.25rem;
+        }
+
+        .signup-form {
+            border: 3px solid black;
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .signup-form form > * {
+            margin: 0.25rem;
+        }
+
+        .part-title-holder {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .part-title-holder > * {
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="form" class="form-holder">
+        <div class="title-holder">
+            <h1>SIGN UP WINDOW</h1>
+        </div>
+
+        <!-- First part -->
+        <div class="part-title-holder">
+            <h3>Place an early preorder of 50€?</h3>
+            <button id="yes-btn">YES</button>
+            <button id="no-btn">NO</button>
+        </div>
+        <div class="indent" style="margin-bottom: 1rem;">
+            <p>-refundable anytime</p>
+            <p>-be the first in line when we deliver the bikes</p>
+            <p>-early believers will get special editions</p>
+            <div class="mt-5">
+                <button id="why-btn">WHY?</button>
+                <p id="why-p" class="mt-5 mb-5" style="display: none;">Investors are looking for traction. No better way to prove it than people pledging money, because they want the product to come to market. With your pledge you are helping our fundraising, in order to bring the most awesome and advanced electric bikes the world has ever seen.</p>
+                <button id="faq-btn">FAQ!</button>
+            </div>        
+        </div>
+        
+        <!-- Second part -->
+        <br class="mt-1">
+        <div class="part-title-holder">
+            <h3>Apply for a chance to test ride the Primo?</h3>
+            <button id="promo-yes-btn">YES</button>
+            <button id="promo-no-btn" style="display: none;">NO</button>
+        </div>
+        <div class="indent" style="margin-bottom: 1rem;">
+            <p>-we want you to become a part of development</p>
+        </div>
+
+        <div class="signup-form" id="signup-form" style="display: none;">
+            <form action="signup" id="signup-form-form">
+                <label for="name">Name:</label>
+                <input required id="form-name-input" type="text">
+                <label for="mType">Which type you want to have most?</label>
+                <div class="skill-level-holder">
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="motocross" name="mType" id="motocross-check">        
+                        <lable>Motocross</lable>
+                    </div>
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="enduro"name="mType" id="enduro-check">
+                        <label>Enduro </label> 
+                    </div>
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="supermoto"name="mType" id="supermoto-check">
+                        <label>Supermoto</label>
+                    </div>
+                </div>
+                <label for="skill">Your level:</label>
+                <div class="skill-level-holder">
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="amateur" name="skill" id="amateur-check">        
+                        <lable>Amateur</lable>
+                    </div>
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="intermediate" name="skill" id="intermediate-check">
+                        <label>Intermediate</label>
+                    </div>
+                    <div class="checkbox-holder">
+                        <input required type="radio" title="fast" name="skill" id="fast-check">
+                        <label>Fast</label>
+                    </div>
+                </div>
+                <label for="submit">“Lets shape the future together”</label>
+                <br>
+                <button type="submit" id="form-submit-btn">SUBMIT</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="./countries.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>
